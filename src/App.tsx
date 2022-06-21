@@ -2,30 +2,20 @@
 import React from 'react' 
 import { hot } from 'react-hot-loader/root'//🔥在这个根组件内引入 hot 热更新组件！！
 import './style/index.less'; //记得引入 less , 否则打包会找不到
-import SmartBlock from './functions/newBlock';
+import useCount from './functions/useCount';
 
 
 
-// class App extends Component {
-//   render(){
-//     return (
-//       <Fragment>
-//         <div>Hello React & Ts</div>
-//       </Fragment>
-//     )
-//   }
-// }
+function App() {
+	const [count] = useCount(5)//传入开始时间
+	
 
-class App extends React.Component {
-    render(){
-      return(
-        <>
-          <div>Hello React & Ts
-          </div>
-          <SmartBlock />
-        </>
-      )
-    }
+		return(
+			<div className='App'>
+				<h1>{count > 0 ? count:"时间结束"}</h1>
+			</div>
+		)
+
 }
 
 
