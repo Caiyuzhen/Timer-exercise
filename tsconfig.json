@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"lib": [//指定要包含在编译中的库文件
+			"dom",
+			"dom.iterable",
+			"es6"
+		],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"module": "es6",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": false,
+		"removeComments": true,     /*编译后移除注释*/
+		"noEmitOnError": true,      /*🔥如果 ts 报错则暂停编译*/
+		"jsx": "react-jsx"
+	},
+	"scripts": {
+		"start": "react-scripts start"
+	},
+	"include": [
+		"./src/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}
